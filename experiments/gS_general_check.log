@@ -1,0 +1,18 @@
+== (a) free shape: residual of the degree-S equation at mu = ybar ==
+max |equation at ybar| over S=2..6, gamma/lognormal, random k: 0.00e+00
+
+== (b) symmetric laws: theory g_S vs Monte Carlo variance ratio ==
+uniform: g1=1.0000 g2=1.0000 g3=0.3000 (closed 0.3000) g4=0.3000 g5=0.1429
+   S=3: MC ratio 0.2942 (SE 0.0080) vs theory 0.3000  z=-0.73  PASS
+   S=5: MC ratio 0.1420 (SE 0.0041) vs theory 0.1429  z=-0.22  PASS
+laplace: g1=1.0000 g2=1.0000 g3=0.8571 (closed 0.8571) g4=0.8571 g5=0.8044
+   S=3: MC ratio 0.8339 (SE 0.0104) vs theory 0.8571  z=-2.23  DIAGNOSTIC (see gS_laplace_diag.log)
+   S=5: MC ratio 0.7558 (SE 0.0125) vs theory 0.8044  z=-3.88  DIAGNOSTIC (see gS_laplace_diag.log)
+beta2: g1=1.0000 g2=1.0000 g3=0.6494 (closed 0.6494) g4=0.6494 g5=0.5232
+   S=3: MC ratio 0.6471 (SE 0.0124) vs theory 0.6494  z=-0.18  PASS
+   S=5: MC ratio 0.5195 (SE 0.0115) vs theory 0.5232  z=-0.32  PASS
+beta1.3: g1=1.0000 g2=1.0000 g3=0.4249 (closed 0.4249) g4=0.4249 g5=0.2527
+   S=3: MC ratio 0.4154 (SE 0.0103) vs theory 0.4249  z=-0.93  PASS
+   S=5: MC ratio 0.2511 (SE 0.0066) vs theory 0.2527  z=-0.25  PASS
+
+ALL PASS

@@ -1,0 +1,5 @@
+oracle one-stage A-gain 1.0473
+pilot fraction 0.333: limit two-stage design A-gain 1.0276 (share 58%)
+pilot fraction 0.200: limit two-stage design A-gain 1.0378 (share 80%)
+pilot fraction 0.100: limit two-stage design A-gain 1.0441 (share 93%)
+pilot fraction 0.050: limit two-stage design A-gain 1.0462 (share 98%)

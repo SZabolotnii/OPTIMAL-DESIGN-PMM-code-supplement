@@ -1,0 +1,37 @@
+== two_stage | EstemPMM 0.5.0 | M=2500 | seed=20261021 | pilot fraction 0.333 ==
+oracle analytic A-gain (calibrated field) = 1.0473
+closed-form field: A-opt design 0.00:0.341 0.54:0.527 1.00:0.132 | analytic A-gain = 1.0484
+N= 600 done (8.4 min): gain P/O 1.035, T/O 0.889, effA_T mean 0.8948
+N= 900 done (15.4 min): gain P/O 1.059, T/O 1.080, effA_T mean 1.0861
+N=1200 done (21.7 min): gain P/O 1.057, T/O 0.965, effA_T mean 0.9659
+N=2400 done (23.4 min): gain P/O 1.061, T/O 1.051, effA_T mean 1.0536
+Warning messages:
+1: In sprintf("N=%4d done (%.1f min): gain P/O %.3f, T/O %.3f, effA_T mean %.4f\n",  :
+  one argument not used by format 'N=%4d done (%.1f min): gain P/O %.3f, T/O %.3f, effA_T mean %.4f
+'
+2: In sprintf("N=%4d done (%.1f min): gain P/O %.3f, T/O %.3f, effA_T mean %.4f\n",  :
+  one argument not used by format 'N=%4d done (%.1f min): gain P/O %.3f, T/O %.3f, effA_T mean %.4f
+'
+3: In sprintf("N=%4d done (%.1f min): gain P/O %.3f, T/O %.3f, effA_T mean %.4f\n",  :
+  one argument not used by format 'N=%4d done (%.1f min): gain P/O %.3f, T/O %.3f, effA_T mean %.4f
+'
+4: In sprintf("N=%4d done (%.1f min): gain P/O %.3f, T/O %.3f, effA_T mean %.4f\n",  :
+  one argument not used by format 'N=%4d done (%.1f min): gain P/O %.3f, T/O %.3f, effA_T mean %.4f
+'
+    N    M oracle_gain oracle_lo oracle_hi twostage_gain twostage_lo
+  600 2500      1.0346    1.0048    1.0659        0.8889      0.8239
+  900 2500      1.0589    1.0271    1.0913        1.0804      1.0018
+ 1200 2500      1.0567    1.0262    1.0888        0.9650      0.8957
+ 2400 2500      1.0614    1.0310    1.0932        1.0505      0.9791
+ twostage_hi twostage_oraclew_gain tsow_lo tsow_hi twostage_vs_oracle tvo_lo
+      0.9594                0.8948  0.8299  0.9655             0.8591 0.7981
+      1.1671                1.0861  1.0061  1.1728             1.0203 0.9434
+      1.0392                0.9659  0.8972  1.0392             0.9132 0.8468
+      1.1336                1.0536  0.9818  1.1375             0.9897 0.9220
+ tvo_hi effA_T_mean effA_T_q10 effA_T_q90 sep_hat_mean mean_strata
+ 0.9255      1.0135     0.9917     1.0300       0.5018      4.2092
+ 1.0982      1.0168     1.0026     1.0291       0.5204      4.2704
+ 0.9813      1.0183     1.0063     1.0284       0.5221      4.2888
+ 1.0661      1.0200     1.0096     1.0274       0.5262      4.3052
+saved results/two_stage_{reps,summary}.csv, results/two_stage_meta.json, tables/tab_twostage.tex
+== DONE ==

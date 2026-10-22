@@ -1,0 +1,12 @@
+# Python cruft
+__pycache__/
+*.py[cod]
+.venv/
+
+# R session files
+.Rhistory
+.RData
+.Rproj.user/
+
+# macOS
+.DS_Store

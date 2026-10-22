@@ -1,0 +1,7 @@
+theory g5 = 0.804428; identity k'Fk/(b'k)^2/m2 = 0.804428
+linear term, 20 MC runs (n=2000, M=4000): mean 0.8067, median 0.8069, range [0.7722, 0.8475]
+direct Var(psi)/(b'k^2 m2), 2e7 draws: 0.8055
+oracle k, n=500: ratio 0.8155 (bootstrap SE 0.0147) vs 0.8044, z +0.76
+oracle k, n=2000: ratio 0.7874 (bootstrap SE 0.0093) vs 0.8044, z -1.83
+oracle k, n=50000: ratio 0.7961 (bootstrap SE 0.0151) vs 0.8044, z -0.55
+Reading: the theory holds; bootstrap SEs understate the MC error when the influence function is ~e^5 under Laplace tails, so single plug-in runs can fall 2-4 SE below g5.

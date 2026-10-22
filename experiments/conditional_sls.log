@@ -1,0 +1,30 @@
+== conditional_sls | M=40000 N=2000 | seed=20261019 ==
+OLS A-optimal:   x     w
+ 0.0 0.322
+ 0.5 0.486
+ 1.0 0.192
+[KURT_HET] A: sep=0.000 gain=1.0000 | D: sep=0.000 gain=1.0000
+   x     w
+ 0.0 0.322
+ 0.5 0.486
+ 1.0 0.192
+[KURT_HOM] A: sep=0.000 gain=1.0000 | D: sep=0.000 gain=1.0000
+   x     w
+ 0.0 0.322
+ 0.5 0.486
+ 1.0 0.192
+[SKEW_HET] A: sep=0.501 gain=1.0252 | D: sep=0.357 gain=1.0059
+    x     w
+ 0.00 0.351
+ 0.54 0.471
+ 1.00 0.178
+[SKEW_HOM] A: sep=0.000 gain=1.0000 | D: sep=0.000 gain=1.0000
+   x     w
+ 0.0 0.322
+ 0.5 0.486
+ 1.0 0.192
+
+[MC] oracle conditional SLS, SKEW_HET ...
+[MC] N=2000 M=40000: MC/analytic total variance = 1.003 (OLS design), 0.998 (SLS design); gain = 1.0312 [1.0120, 1.0508]
+saved results/conditional_sls.json, tables/tab_conditional_sls.tex
+== DONE ==

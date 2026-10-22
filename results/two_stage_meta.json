@@ -1,0 +1,12 @@
+{
+  "seed": 20261021,
+  "M": 2500,
+  "pilot_fraction": 0.333333,
+  "NS": [600, 900, 1200, 2400],
+  "oracle_analytic_gain_calibrated": 1.047314,
+  "closed_form_field": {
+    "design": "0.00:0.341 0.54:0.527 1.00:0.132",
+    "analytic_gain": 1.048384
+  },
+  "engine": "0.5.0"
+}
