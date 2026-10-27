@@ -26,6 +26,7 @@ study, and the symbolic and numerical checks of the appendices.
 | `experiments/g3_derivation.py` | Appendix A (Proposition 1, Monte Carlo check `prop1_mc.csv`) and Appendix B (closed-form g_3, Table B.1, `g3_beta_closed_form.csv`) |
 | `experiments/gS_general_check.py` | Appendix C, Lemma 3: degree-S per-stratum reduction (free shape gives g_S = 1; symmetric law with the symmetry imposed gives g_S = 1/(m_2 b'F^{-1}b)) |
 | `experiments/gS_laplace_diag.py` | Appendix C: Laplace errors at S = 5, Monte Carlo noise versus the asymptotic value |
+| `experiments/kurt_separation_example.py` | Example in Section 3 (numerical instance of separation): the OLS A-optimal design {0, t*, 1} passes its A-equivalence check and fails the one for M_g under the closed-form KURT field (131.8 > 110.4) |
 | `experiments/thm2b_six_point.py` | Remark 1: on six support points a non-constant field can give M_g = c M (c = 4.78) |
 
 Each script writes a `.log` file next to itself; the logs of the runs reported in the paper are
@@ -45,6 +46,7 @@ python3 experiments/g3_derivation.py
 python3 experiments/gS_general_check.py
 python3 experiments/gS_laplace_diag.py
 python3 experiments/thm2b_six_point.py
+python3 experiments/kurt_separation_example.py > experiments/kurt_separation_example.log
 ```
 
 `two_stage.R` and `two_stage_limit.R` read the calibrated field from `results/summary.json`, so

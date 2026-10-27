@@ -1,0 +1,5 @@
+t*      = 0.49976
+weights = [0.3217 0.4862 0.1921]
+OLS:  max f'M^-2 f = 135.363384  tr M^-1 = 135.363384  condition holds: True
+g_3 on the support = [0.9735 0.9147 0.3   ]
+PMM3: max h'M_g^-2 h = 131.773 at x = 0.000  tr M_g^-1 = 110.393  condition violated: True
