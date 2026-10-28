@@ -19,15 +19,20 @@ study, and the symbolic and numerical checks of the appendices.
 
 | Script | Paper artifact |
 |---|---|
-| `experiments/run_all.R` | Tables 1–4 (calibrated KURT field, design separation, A vs D criterion, N-sweep), Figures 1–4; writes `results/summary.json` |
-| `experiments/conditional_sls.R` | Table 6 (global conditional SLSE on the SKEW field) and the covariance check of Proposition 2; writes `results/conditional_sls.json` |
-| `experiments/two_stage.R` | Table 5 (two-stage design with an estimated field, one-third pilot); writes `results/two_stage_*.csv`, `results/two_stage_meta.json` |
-| `experiments/two_stage_limit.R` | Large-N limit of the two-stage design for pilot fractions 1/3, 0.2, 0.1, 0.05 (Section 6) |
-| `experiments/g3_derivation.py` | Appendix A (Proposition 1, Monte Carlo check `prop1_mc.csv`) and Appendix B (closed-form g_3, Table B.1, `g3_beta_closed_form.csv`) |
-| `experiments/gS_general_check.py` | Appendix C, Lemma 3: degree-S per-stratum reduction (free shape gives g_S = 1; symmetric law with the symmetry imposed gives g_S = 1/(m_2 b'F^{-1}b)) |
-| `experiments/gS_laplace_diag.py` | Appendix C: Laplace errors at S = 5, Monte Carlo noise versus the asymptotic value |
+| `experiments/run_all.R` | Tables 2–5 (calibrated KURT field, design separation, A vs D criterion, N-sweep), Figures 1–4; writes `results/summary.json` |
+| `experiments/conditional_sls.R` | Table 7 (global conditional SLSE on the SKEW field) and the covariance check of Proposition 3; writes `results/conditional_sls.json` |
+| `experiments/two_stage.R` | Table 6 (two-stage design with an estimated field, one-third pilot); writes `results/two_stage_*.csv`, `results/two_stage_meta.json` |
+| `experiments/two_stage_limit.R` | Large-N limit of the two-stage design for pilot fractions 1/3, 0.2, 0.1, 0.05 with the field known on the whole grid (Section 6) |
+| `experiments/g3_derivation.py` | Appendix A (Proposition 1, Monte Carlo check `prop1_mc.csv`) and Appendix C (closed-form g_3, Table C.1, `g3_beta_closed_form.csv`) |
+| `experiments/gS_general_check.py` | Appendix D, Lemma 3: degree-S per-stratum reduction (free shape gives g_S = 1; symmetric law with the symmetry imposed gives g_S = 1/(m_2 b'F^{-1}b)) |
+| `experiments/gS_laplace_diag.py` | Appendix D: Laplace errors at S = 5, Monte Carlo noise versus the asymptotic value |
 | `experiments/kurt_separation_example.py` | Example in Section 3 (numerical instance of separation): the OLS A-optimal design {0, t*, 1} passes its A-equivalence check and fails the one for M_g under the closed-form KURT field (131.8 > 110.4) |
-| `experiments/thm2b_six_point.py` | Remark 1: on six support points a non-constant field can give M_g = c M (c = 4.78) |
+| `experiments/symmetry_misspec.py` | Proposition 4, Corollary 1 and Appendix B (local asymmetry, Section 5.2) checked by Monte Carlo on skewed Beta errors; break-even skewness of the KURT design; large-N limit of the two-stage design with the field interpolated between the pilot doses (Sections 5.2 and 6) |
+| `experiments/thm2b_six_point.py` | Remark 3: on six support points a non-constant field can give M_g = c M (c = 4.78) |
+
+From v1.0.2 the numbers of sections, results, tables and appendices above follow the current
+version of the paper; arXiv:2610.33921v2 numbers some of them differently (one table, one
+proposition, two remarks and one appendix fewer).
 
 Each script writes a `.log` file next to itself; the logs of the runs reported in the paper are
 included. `tables/` and `figures/` hold the files that the scripts write and the manuscript
@@ -47,6 +52,7 @@ python3 experiments/gS_general_check.py
 python3 experiments/gS_laplace_diag.py
 python3 experiments/thm2b_six_point.py
 python3 experiments/kurt_separation_example.py > experiments/kurt_separation_example.log
+python3 experiments/symmetry_misspec.py > experiments/symmetry_misspec.log
 ```
 
 `two_stage.R` and `two_stage_limit.R` read the calibrated field from `results/summary.json`, so

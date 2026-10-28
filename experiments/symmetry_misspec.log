@@ -1,0 +1,43 @@
+== part 1: per-stratum PMM_3 with symmetry imposed, on skewed Beta(a, a+d) errors ==
+ a     d      n   gamma3   z=sqrt(n)g3/sqrt(D)  bias(pop.root)  bias(1st ord)  bias(MC) [se]    nMSE/var: theory   MC [se]
+1.0  0.00    400   0.0000     0.000              0.00000        0.00000     0.00009 [0.00020]      0.3000    0.3071 [0.0031]
+1.0  0.00   2000   0.0000     0.000              0.00000        0.00000     0.00013 [0.00009]      0.3000    0.3014 [0.0030]
+1.0  0.05    400   0.0421     0.590              0.02432        0.02454     0.02343 [0.00020]      0.5449    0.5465 [0.0050]
+1.0  0.05   2000   0.0421     1.320              0.02432        0.02454     0.02409 [0.00009]      1.4916    1.4694 [0.0090]
+1.0  0.15    400   0.1196     1.728              0.06646        0.07160     0.06436 [0.00022]      2.0799    2.0349 [0.0116]
+1.0  0.15   2000   0.1196     3.863              0.06646        0.07160     0.06613 [0.00010]      9.1471    9.1145 [0.0256]
+2.0  0.00    400  -0.0000    -0.000             -0.00000       -0.00000    -0.00003 [0.00029]      0.6494    0.6511 [0.0065]
+2.0  0.00   2000  -0.0000    -0.000             -0.00000       -0.00000     0.00007 [0.00013]      0.6494    0.6513 [0.0066]
+2.0  0.05    400   0.0183     0.253              0.00742        0.00743     0.00716 [0.00029]      0.6775    0.6927 [0.0068]
+2.0  0.05   2000   0.0183     0.566              0.00742        0.00743     0.00748 [0.00013]      0.7655    0.7786 [0.0077]
+2.0  0.15    400   0.0534     0.736              0.02092        0.02120     0.01997 [0.00029]      0.8432    0.8453 [0.0082]
+2.0  0.15   2000   0.0534     1.646              0.02092        0.02120     0.02091 [0.00013]      1.5431    1.5534 [0.0127]
+theory column: g3 + n*t^2 with g3 at the perturbed law's even cumulants and t the population root
+Beta(1,1): D = 2.0571, n*Var(sample skewness) at n = 2000: 2.0508
+Beta(2,2): D = 2.0952, n*Var(sample skewness) at n = 2000: 2.1014
+
+== part 2: KURT design (closed-form field), A-criterion, constant skewness gamma3(x) = gamma ==
+OLS-optimal   {0.00:0.322, 0.50:0.486, 1.00:0.192}
+PMM3-optimal  {0.00:0.341, 0.54:0.527, 1.00:0.132}
+A-gain, PMM3 design under the field (gamma = 0): 1.0484
+A-gain of PMM3 design+estimator over OLS design+OLS (gamma = 0): 1.2857
+break-even h = sqrt(N)*gamma, PMM3 design+estimator vs OLS design+OLS: 7.735
+design gain at a fixed PMM3 estimator stays >= 1 up to h = 10.332; limit h -> inf 0.9051 (||b_PMM3 design|| = 0.709, ||b_OLS design|| = 0.675)
+  N =   600: break-even |gamma| full comparison = 0.3158, design-gain comparison = 0.4218
+  N =  1200: break-even |gamma| full comparison = 0.2233, design-gain comparison = 0.2983
+  N =  2400: break-even |gamma| full comparison = 0.1579, design-gain comparison = 0.2109
+sqrt(D) over the KURT field: 1.413 (a = 1) to 1.939 (a = 8); stratum break-even |gamma3| = sqrt(D/n_k)
+
+== part 3: two-stage limit (calibrated field) ==
+oracle one-stage A-gain 1.0473; design for the interpolated field {0.00:0.331, 0.58:0.518, 1.00:0.151}
+one-stage design built on the interpolated field, A-gain under the true field: 1.0350
+pilot fraction 0.333, full field  : limit A-gain 1.0276
+pilot fraction 0.333, interpolated: limit A-gain 1.0227
+pilot fraction 0.200, full field  : limit A-gain 1.0378
+pilot fraction 0.200, interpolated: limit A-gain 1.0309
+pilot fraction 0.100, full field  : limit A-gain 1.0441
+pilot fraction 0.100, interpolated: limit A-gain 1.0348
+pilot fraction 0.050, full field  : limit A-gain 1.0462
+pilot fraction 0.050, interpolated: limit A-gain 1.0354
+pilot fraction 0.000, full field  : limit A-gain 1.0473
+pilot fraction 0.000, interpolated: limit A-gain 1.0350
