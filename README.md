@@ -31,8 +31,8 @@ study, and the symbolic and numerical checks of the appendices.
 | `experiments/thm2b_six_point.py` | Remark 3: on six support points a non-constant field can give M_g = c M (c = 4.78) |
 
 From v1.0.2 the numbers of sections, results, tables and appendices above follow the current
-version of the paper; arXiv:2610.33921v2 numbers some of them differently (one table, one
-proposition, two remarks and one appendix fewer).
+version of the paper; arXiv:2610.33921v2 numbers some of them differently (it has two
+propositions, a corollary, two remarks, a table and an appendix fewer).
 
 Each script writes a `.log` file next to itself; the logs of the runs reported in the paper are
 included. `tables/` and `figures/` hold the files that the scripts write and the manuscript
